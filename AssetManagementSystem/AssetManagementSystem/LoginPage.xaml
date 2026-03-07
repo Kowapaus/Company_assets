@@ -1,0 +1,44 @@
+﻿<Window x:Class="AssetManagementSystem.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторизация"
+        Height="450"
+        Width="350"
+        Background="{StaticResource PrimaryBackgroundBrush}">
+
+    <Grid>
+
+        <StackPanel VerticalAlignment="Center" Margin="40">
+
+           
+            <Image Source="/Images/logo.png"
+                   Height="80"
+                   Margin="0,0,0,20"
+                   HorizontalAlignment="Center"/>
+
+            
+            <TextBlock Text="Вход в систему"
+                       Style="{StaticResource HeaderTextStyle}"
+                       Margin="0,0,0,20"/>
+
+            <TextBox x:Name="LoginBox"
+                     />
+
+            <PasswordBox x:Name="PasswordBox"
+                         Margin="0,5"
+                         Padding="8"/>
+
+            <Button Content="Войти"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Click="Login_Click"/>
+
+            <TextBlock HorizontalAlignment="Center">
+                <Hyperlink Click="OpenRegistration">
+                    Нет аккаунта? Зарегистрироваться
+                </Hyperlink>
+            </TextBlock>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
